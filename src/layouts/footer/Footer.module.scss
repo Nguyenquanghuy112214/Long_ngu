@@ -1,0 +1,300 @@
+section {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background: transparent;
+	overflow: hidden;
+	z-index: 0;
+}
+
+section .wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 90px;
+	background: url('../../assets/images/wave2.png');
+	background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+	animation: animate 10s linear infinite;
+	z-index: 1000;
+	opacity: 1;
+	animation-delay: 0s;
+	bottom: -20px;
+}
+section .wave.wave2 {
+	animation: animate2 5s linear infinite;
+	z-index: 999;
+	opacity: 0.1;
+	animation-delay: -5s;
+	bottom: -10px;
+}
+section .wave.wave3 {
+	animation: animate 10s linear infinite;
+	z-index: 998;
+	opacity: 0.4;
+	animation-delay: -2s;
+	bottom: -15px;
+}
+section .wave.wave4 {
+	animation: animate2 10s linear infinite;
+	z-index: 997;
+	opacity: 0.7;
+	animation-delay: -5s;
+	bottom: -20px;
+}
+
+@keyframes animate {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: 1000px;
+	}
+}
+@keyframes animate2 {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: -1000px;
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 150px;
+	display: flex;
+	align-items: end;
+	background: linear-gradient(180deg, rgba(255, 255, 255), rgba(20, 114, 85, 0.5), rgba(20 114 85));
+	position: relative;
+	padding-top: 100px;
+}
+
+.blur {
+	position: absolute;
+	width: 2000px;
+	height: 307px;
+	border-radius: 30px;
+	filter: blur(42px);
+}
+
+.blur1 {
+	opacity: 0.8;
+	top: 26%;
+	left: 0;
+	transform: translateX(-50%);
+	background-color: #006241;
+}
+.blur2 {
+	opacity: 0.3;
+	top: 8%;
+	right: 0;
+	transform: translateX(50%);
+	background-color: #fffb14;
+}
+
+.wrapper-content {
+	color: white;
+}
+
+.location,
+.phone,
+.earth {
+	padding-bottom: 10px;
+}
+
+.location-icon,
+.phone-icon,
+.earth-icon {
+	font-size: 30px;
+	padding-right: 10px;
+}
+
+.location-content,
+.phone-content,
+.earth-content {
+	position: relative;
+	margin-left: 10px;
+
+	h3 {
+		font-size: 1.8rem;
+		line-height: 2rem;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: -10px;
+		width: 2px;
+		height: 50px;
+		background: white;
+	}
+}
+
+//dien thoai rung lac
+
+.hotline-phone-ring {
+	position: fixed;
+	visibility: visible;
+	background-color: transparent;
+	width: 110px;
+	height: 110px;
+	cursor: pointer;
+	z-index: 11;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	transition: visibility 0.5s;
+	left: 14px;
+	bottom: 0;
+	display: block;
+}
+.hotline-phone-ring-circle {
+	width: 85px;
+	height: 85px;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+	background-color: transparent;
+	border-radius: 100%;
+	border: 2px solid #e60808;
+	animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+	animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+	transition: all 0.5s;
+	transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	opacity: 0.5;
+}
+.hotline-phone-ring-circle-fill {
+	width: 55px;
+	height: 55px;
+	top: 25px;
+	left: 25px;
+	position: absolute;
+	background-color: rgba(230, 8, 8, 0.7);
+	border-radius: 100%;
+	border: 2px solid transparent;
+	animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+	animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+	transition: all 0.5s;
+	transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+.hotline-phone-ring-img-circle {
+	background-color: #e60808;
+	width: 33px;
+	height: 33px;
+	top: 37px;
+	left: 37px;
+	position: absolute;
+	background-size: 20px;
+	border-radius: 100%;
+	border: 2px solid transparent;
+	animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+	animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+	transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	display: box;
+	display: flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hotline-phone-ring-img-circle .pps-btn-img {
+	display: box;
+	display: flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.hotline-phone-ring-img-circle .pps-btn-img img {
+	width: 20px;
+	height: 20px;
+}
+.hotline-bar {
+	position: absolute;
+	background: rgb(49, 74, 166);
+	border-radius: 3px;
+	padding: 0 15px 0 0;
+	background-size: 100%;
+	cursor: pointer;
+	transition: all 0.8s;
+	transition: all 0.8s;
+	z-index: 9;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 50px !important;
+	/* width: 175px !important; */
+	left: 33px;
+	bottom: 37px;
+}
+.hotline-bar > a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+	text-indent: 50px;
+	display: block;
+	letter-spacing: 1px;
+	line-height: 40px;
+	font-family: Arial;
+}
+.hotline-bar > a:hover,
+.hotline-bar > a:active {
+	color: #fff;
+}
+@keyframes phonering-alo-circle-anim {
+	0% {
+		transform: rotate(0) scale(0.5) skew(1deg);
+		opacity: 0.1;
+	}
+	30% {
+		transform: rotate(0) scale(0.7) skew(1deg);
+		opacity: 0.5;
+	}
+	100% {
+		transform: rotate(0) scale(1) skew(1deg);
+		opacity: 0.1;
+	}
+}
+@keyframes phonering-alo-circle-fill-anim {
+	0% {
+		transform: rotate(0) scale(0.7) skew(1deg);
+		opacity: 0.6;
+	}
+	50% {
+		transform: rotate(0) scale(1) skew(1deg);
+		opacity: 0.6;
+	}
+	100% {
+		transform: rotate(0) scale(0.7) skew(1deg);
+		opacity: 0.6;
+	}
+}
+@keyframes phonering-alo-circle-img-anim {
+	0% {
+		transform: rotate(0) scale(1) skew(1deg);
+	}
+	10% {
+		transform: rotate(-25deg) scale(1) skew(1deg);
+	}
+	20% {
+		transform: rotate(25deg) scale(1) skew(1deg);
+	}
+	30% {
+		transform: rotate(-25deg) scale(1) skew(1deg);
+	}
+	40% {
+		transform: rotate(25deg) scale(1) skew(1deg);
+	}
+	50% {
+		transform: rotate(0) scale(1) skew(1deg);
+	}
+	100% {
+		transform: rotate(0) scale(1) skew(1deg);
+	}
+}

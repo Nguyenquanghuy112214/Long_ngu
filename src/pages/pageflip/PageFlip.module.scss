@@ -1,0 +1,230 @@
+.flip-book {
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+	display: none;
+	background-size: cover;
+}
+.page {
+	background-color: hsl(35, 55, 98);
+	color: hsl(35, 35, 35);
+	border: solid 1px hsl(35, 20, 70);
+	overflow: hidden;
+
+	border-radius: 4px;
+
+	.page-content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: stretch;
+		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+		img {
+			height: 100%;
+			width: 100%;
+			box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.3);
+		}
+
+		.page-header {
+			height: 30px;
+			font-size: 100%;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.page-image {
+			height: 100%;
+		}
+
+		.page-text {
+			height: 100%;
+			flex-grow: 1;
+			font-size: 80%;
+			text-align: justify;
+			margin-top: 0px;
+			padding-top: 0px;
+			box-sizing: border-box;
+
+			border-top: solid 1px hsl(35, 55, 90);
+		}
+
+		.page-footer {
+			height: 30px;
+			border-top: solid 1px hsl(35, 55, 90);
+			font-size: 80%;
+			color: hsl(35, 20, 50);
+		}
+	}
+
+	&.--left {
+		// for left page (property will be added automatically)
+		border-right: 0;
+		box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+	}
+
+	&.--right {
+		// for right page (property will be added automatically)
+		border-left: 0;
+		box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+
+		.page-footer {
+			text-align: right;
+		}
+	}
+
+	&.hard {
+		// for hard page
+		background-color: hsl(35, 50, 90);
+		border: solid 1px hsl(35, 20, 50);
+	}
+
+	&.page-cover {
+		background-color: hsl(35, 45, 80);
+		color: hsl(35, 35, 35);
+		border: solid 1px hsl(35, 20, 50);
+
+		h2 {
+			text-align: center;
+			padding-top: 50%;
+			font-size: 210%;
+		}
+
+		&.page-cover-top {
+			box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), -2px 0 5px 2px rgba(0, 0, 0, 0.4);
+		}
+
+		&.page-cover-bottom {
+			box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), 10px 0 8px 0px rgba(0, 0, 0, 0.4);
+		}
+	}
+}
+
+.bgflip {
+	position: relative;
+	margin-top: 30px;
+	background: no-repeat;
+	margin-bottom: 10px;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	// z-index: 1;
+
+	.close {
+		position: absolute;
+		right: 50px;
+		top: 100px;
+		font-size: 40px;
+		z-index: 9;
+		color: white;
+	}
+}
+
+.box-navigate {
+	height: 45px;
+	width: 45px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.6s linear;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	box-shadow: -5px 7px 11px 0px rgb(0 0 0 / 15%);
+}
+@media (min-width: 0px) {
+	.box-navigate.active {
+		width: 60vw;
+		.wrapper-handle {
+			display: flex !important;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.box-navigate.active {
+		width: 50vw;
+		.wrapper-handle {
+			display: flex !important;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.box-navigate.active {
+		width: 40vw;
+		.wrapper-handle {
+			display: flex !important;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.box-navigate.active {
+		width: 20vw;
+		.wrapper-handle {
+			display: flex !important;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+.navgate-pageflip {
+	height: 45px;
+	width: 45px;
+	border-radius: 8px;
+	background: white;
+	transition: all 0.3s linear;
+	position: relative;
+	z-index: 3;
+	flex: 1;
+
+	&:hover,
+	&.active {
+		background: linear-gradient(90deg, #1f966f, #1b785c);
+		color: white;
+		font-size: 600;
+	}
+	&.active {
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+}
+
+.wrapper-handle {
+	width: 100%;
+	background-color: white;
+	color: black;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	& > span {
+		cursor: pointer;
+		padding: 0 10px;
+	}
+	.totalnumber-page {
+		& > input {
+			width: 30px;
+			border-left: 2px solid #ccc;
+			padding: 4px;
+		}
+		& > span {
+			&:nth-child(2) {
+				padding: 4px;
+			}
+			&:nth-child(3) {
+				border-right: 2px solid #ccc;
+				padding: 4px;
+			}
+		}
+	}
+}

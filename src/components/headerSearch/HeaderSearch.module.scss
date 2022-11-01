@@ -1,0 +1,134 @@
+.header-search {
+	&__input {
+		display: flex;
+		align-items: center;
+		&-down {
+			position: relative;
+		}
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			height: 38px;
+			& input {
+				height: 100%;
+				border: none;
+
+				padding: 0 8px;
+			}
+		}
+		&-down .btn1-title {
+			position: relative;
+			border: none;
+			outline: none;
+			font-size: 15px;
+			background: #ffffff;
+			color: #bdbdbdbd;
+			width: 100px;
+			height: 38px;
+			border-radius: 18px 0px 0px 18px;
+		}
+		&-down .btn2-title {
+			position: relative;
+			border: none;
+			outline: none;
+			font-size: 15px;
+			background: #ffffff;
+			// color: #bdbdbdbd;
+			width: 100px;
+			height: 38px;
+			border-radius: 6px 0px 0px 6px;
+		}
+		&-down button::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			width: 2px;
+			height: 28px;
+			background: #dddd;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&-down span {
+			margin-left: 20px;
+			color: #000;
+			opacity: 0.8;
+			font-size: 13px;
+		}
+	}
+}
+
+.header-search__btn {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	line-clamp: 1;
+	-webkit-box-orient: vertical;
+
+	flex-shrink: 0;
+	margin-left: 20px;
+	height: 38px;
+	border-radius: 18px;
+	font-size: 15px;
+	padding: 8px 14px;
+	transition: all 0.3s ease;
+	background-color: white;
+	&:hover {
+		background-color: #ddd;
+	}
+}
+
+.close {
+	padding: 0 2px;
+	line-height: 38px;
+	height: 38px;
+	color: #066747;
+	background-color: white;
+	font-size: 15px;
+	cursor: pointer;
+}
+.wrapper-micro {
+	height: 100%;
+	background-color: white;
+	align-items: center;
+	line-height: 38px;
+	width: 44px;
+	text-align: center;
+	padding: 0 12px;
+}
+
+.micro {
+	padding: auto;
+	color: #066747;
+	background-color: white;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.icon-search {
+	position: relative;
+	height: 38px;
+	line-height: 38px;
+	background-color: white;
+	padding: 0 20px;
+	border-bottom-right-radius: 18px;
+	border-top-right-radius: 18px;
+	color: #066747;
+	cursor: pointer;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 2px;
+		height: 28px;
+		background: rgba(221, 221, 221, 0.8666666667);
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.box {
+	position: absolute;
+	border-radius: 16px;
+	// top: 0;
+}

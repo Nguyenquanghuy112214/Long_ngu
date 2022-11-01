@@ -1,0 +1,86 @@
+header {
+	// height: 80px;
+	width: 100%;
+	padding: 0 30px;
+	background: linear-gradient(90deg, var(--primary-color-left) 8%, var(--primary-color-right));
+}
+
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	z-index: var(--index-upper);
+	background: linear-gradient(90deg, var(--primary-color-left) 8%, var(--primary-color-right));
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+// .logo-group {
+// 	img {
+// 		width: 150px;
+// 	}
+// }
+
+.logo-name {
+	padding-bottom: 4px;
+	text-align: center;
+	color: white;
+	margin-left: 20px;
+	a {
+		h5 {
+			color: white;
+			font-size: 13px;
+			text-transform: uppercase;
+		}
+		h4 {
+			color: white;
+			font-size: 17px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.header-btn {
+	font-size: 16px;
+	border-radius: 18px;
+	padding: 6px 9px;
+	background: #2c9e3e;
+	border: 0.5px solid #ffffff;
+	color: white;
+	transition: all 0.3s linear;
+
+	&:hover {
+		border: 0.5px solid transparent;
+		color: white;
+	}
+}
+
+.notify {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	color: black;
+}
+
+.notify-avatar {
+	position: relative;
+}
+
+.box {
+	position: absolute;
+	top: 100px;
+	right: 20px;
+	width: 300px;
+}

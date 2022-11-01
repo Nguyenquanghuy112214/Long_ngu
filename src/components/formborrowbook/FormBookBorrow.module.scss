@@ -1,0 +1,32 @@
+.wrapper {
+	background-color: white;
+	padding: 30px 20px 10px 20px;
+	display: none;
+}
+
+.wrapper.active {
+	display: block;
+}
+
+.button {
+	padding: 8px 25px;
+	background: linear-gradient(90deg, #1f966f, #0fc58d);
+	color: white;
+	border-radius: 8px;
+	margin: 20px 0;
+	cursor: pointer;
+}
+
+//  FormNotication
+
+.notify {
+	display: none;
+}
+
+.notify.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	transform: translateY(120px);
+}

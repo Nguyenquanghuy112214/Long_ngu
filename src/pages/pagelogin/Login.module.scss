@@ -1,0 +1,220 @@
+.modal {
+	background-color: #e5e5e5;
+}
+
+.wrapper {
+	background-color: white;
+	min-height: 600px;
+	position: relative;
+	height: 100vh;
+}
+
+.image {
+	& img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.form {
+	position: absolute;
+	top: 10%;
+	right: 50%;
+	box-shadow: 0px 0px 10px #bbbbbb;
+	border-radius: 12px;
+	max-width: 560px;
+
+	background-color: white;
+	transform: translateX(50%);
+	padding: 50px 30px;
+
+	& .login {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2.3rem;
+		font-weight: 500;
+		margin-top: 60px;
+		padding: 12px;
+		border-radius: 6px;
+		background: var(--primary-main-color);
+		text-transform: uppercase;
+		height: 100%;
+		color: white;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.title {
+	padding-bottom: 20px;
+	font-size: 2.8rem;
+	position: relative;
+	color: #066747;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 2px solid #066747;
+}
+
+.content {
+	margin-top: 48px;
+	& .checkbox {
+		margin-top: 16px;
+		display: flex;
+
+		& .item1 {
+			margin-right: 20px;
+		}
+	}
+}
+
+.rounded-checkbox1,
+.rounded-checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	border: 1px solid #696969;
+	user-select: none;
+	position: relative;
+	// margin-top: 8px;
+	margin-right: 14px;
+	cursor: pointer;
+}
+
+.rounded-checkbox {
+	input {
+		display: none;
+		&:checked ~ .mark-round-checkbox {
+			background: var(--primary-main-color);
+		}
+	}
+}
+
+.rounded-checkbox1 {
+	input {
+		display: none;
+		&:checked ~ .mark-round-checkbox1 {
+			background: var(--primary-main-color);
+		}
+	}
+}
+.item1 {
+	display: flex;
+	align-items: center;
+}
+
+.item2 {
+	display: flex;
+	align-items: center;
+}
+
+.user {
+	position: relative;
+	padding: 10px 0px;
+	height: 60px;
+	margin-top: 65px;
+
+	& input {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 50px;
+		padding: 10px 15px;
+		width: 100%;
+		border: 1px solid #e3e3e3;
+		border-radius: 6px;
+		font-weight: 300;
+	}
+	.span {
+		z-index: 2;
+		color: #aaaaaa;
+		position: absolute;
+		top: -12px;
+		background: white;
+		font-size: 13px;
+		left: 15px;
+		font-weight: bold;
+	}
+}
+
+.password {
+	position: relative;
+	padding: 10px 0px;
+	height: 60px;
+	margin-top: 40px;
+
+	& input {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 50px;
+		padding: 10px 15px;
+		width: 100%;
+		border: 1px solid #e3e3e3;
+		border-radius: 6px;
+		font-weight: 300;
+	}
+	.span {
+		z-index: 2;
+		color: #aaaaaa;
+		position: absolute;
+		top: -12px;
+		background: white;
+		font-size: 13px;
+		left: 15px;
+		font-weight: bold;
+	}
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	transform: translateY(-40%);
+	& svg {
+		width: 20px;
+		height: 20px;
+		font-weight: 300;
+		cursor: pointer;
+	}
+}
+
+.toltal-error {
+	display: block;
+	padding-top: 40px;
+	font-size: 2rem;
+	color: red;
+}
+
+.mark-round-checkbox1,
+.mark-round-checkbox {
+	position: absolute;
+	width: 60%;
+	height: 60%;
+	background: #ffffff;
+	border-radius: 50%;
+}
+
+.username.active {
+	border: 2px solid red;
+}
+
+.password.active {
+	border: 2px solid red;
+}
+
+.text-user.active,
+.text-password.active {
+	z-index: 2;
+	color: red;
+	position: absolute;
+	top: -12px;
+	background: white;
+	font-size: 13px;
+	left: 15px;
+	font-weight: bold;
+}

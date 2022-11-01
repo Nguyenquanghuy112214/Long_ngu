@@ -1,0 +1,149 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	height: 58px;
+	background-color: white;
+	padding: 10px;
+	overflow: hidden;
+	border-radius: 14px;
+}
+
+.body {
+	padding: 33px 0;
+	&__content {
+		background-color: white;
+		padding: 33px 30px;
+		border-radius: 26px;
+
+		&-detail {
+			img {
+				height: auto;
+				width: 100%;
+				object-fit: cover;
+				box-shadow: 1px 7px 11px rgb(0 0 0 / 30%);
+				border-radius: 14px;
+			}
+			&-text {
+				display: flex;
+				flex-direction: column;
+				// margin-left: 24px;
+				& button {
+					max-width: 250px;
+					padding: 10px 0;
+					margin: 10px 0;
+					border-radius: 6px;
+					width: 100px;
+					background: linear-gradient(90deg, #1f966f, #0fc58d);
+					color: white;
+					span {
+						margin-right: 10px;
+					}
+				}
+				&-header {
+					font-size: 2.4rem;
+				}
+				&-span {
+					display: flex;
+					flex-direction: column;
+					font-size: 1.6rem;
+					flex: 2;
+					span svg {
+						font-size: 2.4rem;
+					}
+				}
+				&-login {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					line-clamp: 2;
+					-webkit-box-orient: vertical;
+					margin: 10px 0;
+					// flex: 1;
+					width: 40%;
+					padding: 0 30px;
+					background: linear-gradient(90deg, #006241 7.99%, #1b785c 100%);
+					border-radius: 8px;
+					color: white;
+					transition: all 0.3s linear;
+					&:hover {
+						opacity: 0.9;
+					}
+				}
+			}
+		}
+	}
+}
+
+.body__content-introduce {
+	font-size: 20px;
+	padding-top: 30px;
+	font-weight: 500;
+	border-bottom: 2px solid #ccc;
+}
+
+.no-content-detail {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 60px 10px;
+	position: relative;
+	opacity: 0.8;
+	background: linear-gradient(0deg, #eeeeee, white);
+	span {
+		font-size: 16px;
+		text-transform: uppercase;
+		color: var(--primary-main-color);
+		font-weight: bold;
+	}
+}
+
+.image {
+	position: relative;
+	transition: all 0.3s linear;
+}
+
+.image::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	opacity: 0;
+	transition: all 0.3s ease;
+	border-radius: 14px;
+	transform: translateY(-15%);
+}
+
+.image:hover::before {
+	opacity: 0.3;
+	transform: translateY(0);
+}
+.image:hover h3 {
+	color: white;
+	transform: scale(1);
+	box-shadow: 2px 3px 42px rgb(0 0 0);
+	cursor: pointer;
+	border-radius: 10px;
+}
+.iconpng {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%);
+	transform: translateX(-50%);
+	font-weight: 500;
+	font-size: 20px;
+	color: white;
+
+	h3 {
+		border: 2px solid #fff;
+		background-color: transparent;
+		color: #fff;
+		transform: scale(0);
+		padding: 5px;
+		transition: all 0.3s linear;
+	}
+}

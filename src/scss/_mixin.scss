@@ -1,0 +1,11 @@
+@mixin make-container() {
+	width: 100%;
+	// padding-right: 1rem;
+	// padding-left: 1rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin media-breakpoint-up($container-max-widths) {
+	max-width: $container-max-widths;
+}

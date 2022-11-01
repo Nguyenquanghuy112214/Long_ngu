@@ -1,0 +1,72 @@
+.hot {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	height: 60px;
+	width: 100%;
+	margin-top: 12px;
+	padding-left: 10px;
+	border-radius: 18px;
+}
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.wrapper {
+	li {
+		position: relative;
+		cursor: pointer;
+
+		> span {
+			position: absolute;
+			background: #1a775b;
+			left: 0;
+			bottom: -4px;
+			height: 6px;
+			width: 100%;
+			border-radius: 4px;
+		}
+	}
+	li + li {
+		margin-left: 10px;
+	}
+}
+.item-hot {
+	font-size: 1.8rem;
+	transition: all 0.5s linear;
+	&.active {
+		color: #006241;
+		font-weight: 600;
+		// font-size: 1.8rem;
+	}
+}
+
+// nav {
+// 	display: flex;
+
+// 	> div {
+// 		width: 40px;
+// 		height: 40px;
+// 		cursor: pointer;
+// 		padding: 5px;
+// 		position: relative;
+// 		&:after {
+// 			content: '';
+// 			display: block;
+// 			height: 100%;
+// 			background: red;
+// 		}
+
+// 		> span {
+// 			position: absolute;
+// 			background: blue;
+// 			left: 5px;
+// 			right: 5px;
+// 			top: 5px;
+// 			bottom: 5px;
+// 		}
+// 	}
+// }

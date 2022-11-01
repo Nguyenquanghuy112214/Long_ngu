@@ -1,0 +1,46 @@
+.item-bookgrid {
+	grid-gap: 20px;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	margin-bottom: 3rem;
+}
+
+.pagination {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5rem;
+	font-size: 1.2rem;
+	gap: 2px;
+}
+
+.page-num {
+	padding: 15px 20px;
+	cursor: pointer;
+	border-radius: 12px;
+	font-weight: 400;
+	background-color: #fff;
+	border: 1px solid #1f966f;
+	font-size: 1.8rem;
+	li a {
+		font-size: 1.8rem;
+	}
+	&:hover {
+		background-color: #1f966f;
+		color: #fff;
+	}
+}
+
+.pagination .active {
+	background-color: #1f966f;
+	color: white;
+}
+.item-bookgrid {
+	grid-gap: 20px;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	margin-bottom: 3rem;
+}

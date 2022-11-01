@@ -1,0 +1,39 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	height: 58px;
+	background-color: white;
+	padding: 10px;
+	overflow: hidden;
+	border-radius: 14px;
+
+	box-shadow: 0 0.25rem 1rem rgba(161, 172, 184, 0.45) !important;
+
+	.header {
+		display: flex;
+		align-items: center;
+		.home {
+			font-size: 1.7rem;
+			color: rgb(101, 101, 101);
+			&::after {
+				content: '>';
+				padding: 0px 15px;
+				font-size: 18px;
+			}
+		}
+		.content {
+			color: var(--primary-main-color);
+			font-weight: 600;
+			max-width: 500px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
+	}
+
+	.body {
+		padding: 33px 0;
+	}
+}

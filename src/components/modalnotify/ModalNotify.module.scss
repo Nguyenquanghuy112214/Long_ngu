@@ -1,0 +1,21 @@
+.modalNotify {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+	.contentModal {
+		position: relative;
+		width: 70vw;
+		height: 500px;
+		background-color: white;
+		animation: rundown 0.6s ease-in-out;
+
+		z-index: 999999;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

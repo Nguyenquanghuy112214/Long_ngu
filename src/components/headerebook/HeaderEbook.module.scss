@@ -1,0 +1,24 @@
+.header {
+	display: flex;
+	align-items: center;
+	// position: relative;
+	.home {
+		font-size: 1.7rem;
+		color: rgb(101, 101, 101);
+		&::after {
+			content: '>';
+			padding: 0px 15px;
+			font-size: 18px;
+		}
+	}
+	.content {
+		color: var(--primary-main-color);
+		font-weight: 600;
+		max-width: 500px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+}

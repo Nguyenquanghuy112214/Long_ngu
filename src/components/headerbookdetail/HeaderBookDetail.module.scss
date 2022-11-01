@@ -1,0 +1,25 @@
+.header {
+	display: flex;
+	align-items: center;
+	.home {
+		margin-right: 2px;
+		line-height: 58px;
+		color: rgb(101, 101, 101);
+		display: flex;
+		&::after {
+			content: '>';
+			padding: 0px 3px;
+			font-size: 18px;
+		}
+	}
+	.content {
+		color: var(--primary-main-color);
+		font-weight: 600;
+		max-width: 500px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+}
